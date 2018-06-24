@@ -48,7 +48,7 @@ public class TaxProcessing extends HttpServlet{
         //sends the response
         PrintWriter out= response.getWriter();
         out.println("<html>");
-        out.println("<body bgcolor=pink");
+        out.println("<body bgcolor=pink>");
         out.println("<h2>Income Tax Department</h2>");
         out.println("<table border=2>");
         out.println("<tr>");
@@ -77,9 +77,9 @@ public class TaxProcessing extends HttpServlet{
         
         if (s!=null){
             out.println("<ol>");
-            for (int idx=0; idx<s.length;idx++){
+            for (String item : s) {
                 out.println("<li>");
-                out.println(s[idx]);
+                out.println(item);
                 out.println("</li>");
             }
             out.println("</ol>");
